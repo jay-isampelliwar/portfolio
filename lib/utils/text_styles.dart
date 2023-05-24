@@ -1,14 +1,19 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class AppTextStyles {
   static TextStyle text12(
-      {bool light = false, bool bold = false, required double val}) {
-    return TextStyle(fontSize: val, fontWeight: FontWeight.bold
-        // fontFamily: bold
-        //     ? "assets/fonts/Montserrat-Bold.ttf"
-        //     : light
-        //         ? "assets/fonts/Montserrat-Light.ttf"
-        //         : "assets/fonts/Montserrat-Regular.ttf",
-        );
+      {bool light = false,
+      bool bold = false,
+      required double val,
+      Color color = Colors.white}) {
+    return TextStyle(
+      fontSize: val,
+      color: color,
+      fontWeight: bold
+          ? FontWeight.bold
+          : light
+              ? FontWeight.w100
+              : FontWeight.normal,
+    );
   }
 }
