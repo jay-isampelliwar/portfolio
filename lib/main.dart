@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/responsive.dart';
 import 'package:portfolio/screens/home.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
