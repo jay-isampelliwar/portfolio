@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/web_colors.dart';
+import 'package:portfolio/widgets/plain_button.dart';
 
 import '../utils/text_styles.dart';
 
@@ -50,9 +52,7 @@ class Container1 extends StatelessWidget {
                               style: AppTextStyles.text12(
                                 bold: true,
                                 val: size.width * 0.025,
-                              ).copyWith(
-                                color: Colors.greenAccent,
-                              ),
+                              ).copyWith(color: AppColors.secondary),
                             ),
                             TextSpan(
                               text: "I'm Full Stack Flutter Developer.",
@@ -66,29 +66,11 @@ class Container1 extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.symmetric(
-                          vertical: size.height * 0.02,
-                        ),
-                        height: size.height * 0.07,
-                        width: size.width * 0.185,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          border:
-                              Border.all(color: Colors.greenAccent, width: 2),
-                        ),
-                        child: Align(
-                          child: Text(
-                            "Know more",
-                            style: AppTextStyles.text12(
-                              bold: true,
-                              val: size.width * 0.02,
-                            ).copyWith(
-                              color: Colors.greenAccent,
-                            ),
-                          ),
-                        ),
-                      ),
+                      PlainButton(
+                        borderColor: AppColors.secondary,
+                        textColor: AppColors.secondary,
+                        text: "Know more",
+                      )
                     ],
                   ),
                 );
