@@ -10,14 +10,16 @@ class Desktop extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Container1(),
-          Container2(),
-        ],
+      backgroundColor: Colors.black,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Container1(),
+            Container2(),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
