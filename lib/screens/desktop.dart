@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/containers/container3.dart';
+import 'package:portfolio/containers/footer.dart';
 
 import '../containers/container1.dart';
 import '../containers/container2.dart';
@@ -17,6 +19,8 @@ class Desktop extends StatelessWidget {
           children: const [
             Container1(),
             Container2(),
+            Container3(),
+            Footer(),
           ],
         ),
       ),
