@@ -11,14 +11,11 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.4,
       width: size.width,
       color: AppColors.footer,
+      padding: EdgeInsets.symmetric(vertical: size.height * 0.06),
       child: Align(
         child: Column(children: [
-          SizedBox(
-            height: size.height * 0.1,
-          ),
           Icon(
             Icons.arrow_upward_rounded,
             size: size.width * 0.03,
