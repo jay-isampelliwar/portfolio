@@ -43,6 +43,7 @@ class ProjectContainer extends StatelessWidget {
                   text: "Live Demo",
                   replaceTextColor: AppColors.primary,
                   textColor: Colors.white,
+                  onTap: () {},
                 ),
                 SizedBox(
                   width: size.width * 0.03,
