@@ -31,38 +31,27 @@ class Container4 extends StatelessWidget {
         ),
         Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ProjectContainer(
-                  description:
-                      "Developed a mobile application using Flutter for the frontend and \nNode.js with Express.js and Socket.IO for the backend. \nEnabled real-time communication by allowing users to join the chat by \nentering their name on the lobby page.",
-                  title: "Real-Time Chatting Application",
-                  onTap: () {
-                    html.window.open(
-                        "https://github.com/jay-isampelliwar/flutter_chat_app",
-                        "_blank");
-                  },
-                ),
-              ],
+            ProjectContainer(
+              description:
+                  "Developed a mobile application using Flutter for the frontend and \nNode.js with Express.js and Socket.IO for the backend. \nEnabled real-time communication by allowing users to join the chat by \nentering their name on the lobby page.",
+              title: "Real-Time Chatting Application",
+              onTap: () {
+                html.window.open(
+                    "https://github.com/jay-isampelliwar/flutter_chat_app",
+                    "_blank");
+              },
             ),
             SizedBox(
               height: size.height * 0.1,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ProjectContainer(
-                  description:
-                      "I developed a full-stack todo application using Flutter and the BLoC pattern \nthat includes features such as JWT authentication, email OTP verification,\nand the ability to add and delete todo items. This project showcases my\nproficiency in mobile app development using Flutter and my ability to\nimplement best practices such as separation of concerns and state\nmanagement using the BLoC pattern.",
-                  title: "TODO",
-                  onTap: () {
-                    html.window.open(
-                        "https://github.com/jay-isampelliwar/todo_app",
-                        "_blank");
-                  },
-                ),
-              ],
+            ProjectContainer(
+              description:
+                  "I developed a full-stack todo application using Flutter and the BLoC pattern \nthat includes features such as JWT authentication, email OTP verification,\nand the ability to add and delete todo items. This project showcases my\nproficiency in mobile app development using Flutter and my ability to\nimplement best practices such as separation of concerns and state\nmanagement using the BLoC pattern.",
+              title: "TODO",
+              onTap: () {
+                html.window.open(
+                    "https://github.com/jay-isampelliwar/todo_app", "_blank");
+              },
             ),
             SizedBox(
               height: size.height * 0.1,
