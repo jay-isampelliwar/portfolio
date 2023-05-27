@@ -71,6 +71,7 @@ class Container1 extends StatelessWidget {
                         textColor: AppColors.secondary,
                         replaceTextColor: Colors.white,
                         text: "Know more",
+                        onTap: () {},
                       )
                     ],
                   ),

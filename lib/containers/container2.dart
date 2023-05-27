@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/utils/web_colors.dart';
-
 import '../widgets/app_button.dart';
 
 class Container2 extends StatelessWidget {
@@ -60,6 +59,7 @@ class Container2 extends StatelessWidget {
                         text: "View Resume",
                         replaceTextColor: AppColors.secondary,
                         textColor: Colors.white,
+                        onTap: () {},
                       )
                     ],
                   ),
