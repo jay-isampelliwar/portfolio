@@ -15,7 +15,6 @@ class Container2 extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height,
       width: size.width,
       color: AppColors.primary,
       child: Stack(
