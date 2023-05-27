@@ -1,7 +1,11 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/utils/web_colors.dart';
+
 import '../widgets/app_button.dart';
 
 class Container2 extends StatelessWidget {
@@ -59,7 +63,11 @@ class Container2 extends StatelessWidget {
                         text: "View Resume",
                         replaceTextColor: AppColors.secondary,
                         textColor: Colors.white,
-                        onTap: () {},
+                        onTap: () {
+                          html.window.open(
+                              "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=share_link",
+                              "_blank");
+                        },
                       )
                     ],
                   ),
