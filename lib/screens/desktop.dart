@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/containers/container3.dart';
-import 'package:portfolio/containers/footer.dart';
 
 import '../containers/container1.dart';
 import '../containers/container2.dart';
+import '../containers/container3.dart';
+import '../containers/footer.dart';
 
 class Desktop extends StatelessWidget {
   const Desktop({Key? key}) : super(key: key);
