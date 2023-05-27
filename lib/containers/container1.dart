@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/web_colors.dart';
 
 import '../utils/text_styles.dart';
-import '../widgets/app_button.dart';
 
 class Container1 extends StatelessWidget {
   const Container1({
@@ -52,7 +51,7 @@ class Container1 extends StatelessWidget {
                                     .copyWith(color: AppColors.secondary),
                               ),
                               TextSpan(
-                                text: "I'm Full Stack Flutter Developer.",
+                                text: "I'm Flutter Developer.",
                                 style: AppTextStyles.h4(bold: true, size: size)
                                     .copyWith(
                                   color: Colors.white,
@@ -61,13 +60,6 @@ class Container1 extends StatelessWidget {
                             ],
                           ),
                         ),
-                        AppButton(
-                          borderColor: AppColors.secondary,
-                          textColor: AppColors.secondary,
-                          replaceTextColor: Colors.white,
-                          text: "Know more",
-                          onTap: () {},
-                        )
                       ],
                     ),
                   );

@@ -52,7 +52,7 @@ class Container2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "This is where you can describe about yourself. The more you describe about \nyourself, the more chances you have!\nExtra Information about you! like hobbies and your goals.",
+                        "I am a junior Flutter developer, passionate about creating innovative and \nengaging mobile applications. With a strong foundation in programming \nand a keen interest in mobile development, I have embarked on a journey \nto master the Flutter framework.",
                         style: AppTextStyles.h6(size: size),
                       ),
                       SizedBox(

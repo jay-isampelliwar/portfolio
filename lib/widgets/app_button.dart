@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sprung/sprung.dart';
 import '../utils/text_styles.dart';
 
 class AppButton extends StatefulWidget {
@@ -23,8 +24,11 @@ class AppButton extends StatefulWidget {
 
 class _AppButtonState extends State<AppButton> {
   bool isHover = false;
+
   @override
   Widget build(BuildContext context) {
+    final hoveredTransform = Matrix4.identity()..translate(0, -6, 0);
+    final transform = isHover ? hoveredTransform : Matrix4.identity();
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: widget.onTap,
@@ -32,7 +36,9 @@ class _AppButtonState extends State<AppButton> {
         onEnter: (event) => changeState(true),
         onExit: (event) => changeState(false),
         child: AnimatedContainer(
+          curve: Sprung.overDamped,
           duration: const Duration(milliseconds: 50),
+          transform: transform,
           margin: EdgeInsets.symmetric(
             vertical: size.height * 0.02,
           ),
