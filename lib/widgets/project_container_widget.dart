@@ -45,8 +45,8 @@ class ProjectContainer extends StatelessWidget {
           width: size.width * 0.01,
         ),
         Container(
-          height: size.width * 0.15,
-          width: size.width * 0.15,
+          height: size.width * 0.2,
+          width: size.width * 0.2,
           color: AppColors.secondary,
         ),
       ],

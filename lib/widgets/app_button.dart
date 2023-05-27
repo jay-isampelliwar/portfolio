@@ -36,13 +36,18 @@ class _AppButtonState extends State<AppButton> {
           margin: EdgeInsets.symmetric(
             vertical: size.height * 0.02,
           ),
+          padding: EdgeInsets.symmetric(
+            horizontal: size.width * 0.005,
+            vertical: size.height * 0.01,
+          ),
           height: size.width * 0.035,
           width: size.width * 0.15,
           decoration: BoxDecoration(
             color: isHover ? widget.borderColor : widget.bgColor,
             border: Border.all(color: widget.borderColor, width: 2),
           ),
-          child: Align(
+          child: FittedBox(
+            alignment: Alignment.center,
             child: Text(
               widget.text,
               style: AppTextStyles.h5(bold: true, size: size).copyWith(
