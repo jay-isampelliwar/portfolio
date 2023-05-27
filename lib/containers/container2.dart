@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/utils/web_colors.dart';
-import 'package:portfolio/widgets/plain_button.dart';
+
+import '../widgets/app_button.dart';
 
 class Container2 extends StatelessWidget {
   const Container2({super.key});
@@ -55,9 +56,10 @@ class Container2 extends StatelessWidget {
                       SizedBox(
                         height: size.height * 0.01,
                       ),
-                      PlainButton(
-                        bgColor: Colors.transparent,
+                      AppButton(
                         text: "View Resume",
+                        replaceTextColor: AppColors.secondary,
+                        textColor: Colors.white,
                       )
                     ],
                   ),

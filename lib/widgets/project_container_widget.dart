@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/plain_button.dart';
+import 'package:portfolio/widgets/app_button.dart';
 
 import '../utils/text_styles.dart';
 import '../utils/web_colors.dart';
@@ -39,7 +39,11 @@ class ProjectContainer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                PlainButton(text: "Live Demo"),
+                AppButton(
+                  text: "Live Demo",
+                  replaceTextColor: AppColors.primary,
+                  textColor: Colors.white,
+                ),
                 SizedBox(
                   width: size.width * 0.03,
                 ),
