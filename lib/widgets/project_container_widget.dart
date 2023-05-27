@@ -13,55 +13,40 @@ class ProjectContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               title,
-              style: AppTextStyles.text12(
-                val: size.width * 0.02,
-                bold: true,
-              ),
+              style: AppTextStyles.h5(size: size, bold: true),
             ),
             SizedBox(
-              height: size.height * 0.03,
+              height: size.width * 0.01,
             ),
             Text(
               description,
-              style: AppTextStyles.text12(val: size.width * 0.01),
+              style: AppTextStyles.h6(
+                size: size,
+              ),
             ),
             SizedBox(
-              height: size.height * 0.03,
+              height: size.width * 0.01,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                AppButton(
-                  text: "Live Demo",
-                  replaceTextColor: AppColors.primary,
-                  textColor: Colors.white,
-                  onTap: () {},
-                ),
-                SizedBox(
-                  width: size.width * 0.03,
-                ),
-                Text(
-                  "Source Code",
-                  style: AppTextStyles.text12(
-                    val: size.width * 0.016,
-                    bold: true,
-                  ),
-                )
-              ],
-            )
+            AppButton(
+              onTap: () {},
+              textColor: Colors.white,
+              text: "Source Code",
+              replaceTextColor: AppColors.primary,
+            ),
           ],
         ),
+        SizedBox(
+          width: size.width * 0.01,
+        ),
         Container(
-          height: size.width * 0.3,
-          width: size.width * 0.4,
+          height: size.width * 0.15,
+          width: size.width * 0.15,
           color: AppColors.secondary,
         ),
       ],

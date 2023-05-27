@@ -45,10 +45,7 @@ class _AppButtonState extends State<AppButton> {
           child: Align(
             child: Text(
               widget.text,
-              style: AppTextStyles.text12(
-                bold: true,
-                val: size.width * 0.016,
-              ).copyWith(
+              style: AppTextStyles.h5(bold: true, size: size).copyWith(
                 color: isHover ? widget.replaceTextColor : widget.textColor,
               ),
             ),
