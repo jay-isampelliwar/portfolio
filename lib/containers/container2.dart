@@ -33,8 +33,8 @@ class Container2 extends StatelessWidget {
               ),
               Text(
                 "ABOUT ME",
-                style: AppTextStyles.text12(
-                  val: size.width * 0.02,
+                style: AppTextStyles.h4(
+                  size: size,
                   bold: true,
                 ),
               ),
@@ -54,7 +54,7 @@ class Container2 extends StatelessWidget {
                     children: [
                       Text(
                         "This is where you can describe about yourself. The more you describe about \nyourself, the more chances you have!\nExtra Information about you! like hobbies and your goals.",
-                        style: AppTextStyles.text12(val: size.width * 0.01),
+                        style: AppTextStyles.h6(size: size),
                       ),
                       SizedBox(
                         height: size.height * 0.01,
@@ -65,8 +65,9 @@ class Container2 extends StatelessWidget {
                         textColor: Colors.white,
                         onTap: () {
                           html.window.open(
-                              "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=share_link",
-                              "_blank");
+                            "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=share_link",
+                            "_blank",
+                          );
                         },
                       )
                     ],

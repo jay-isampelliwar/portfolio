@@ -71,10 +71,8 @@ class Footer extends StatelessWidget {
           ),
           Text(
             "© 2023 - Template developed by Jay Isampelliwar",
-            style: AppTextStyles.text12(
-              val: size.width * 0.01,
-            ),
-          )
+            style: AppTextStyles.h6(size: size),
+          ),
         ]),
       ),
     );

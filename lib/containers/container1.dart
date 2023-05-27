@@ -40,26 +40,20 @@ class Container1 extends StatelessWidget {
                           children: [
                             TextSpan(
                               text: "Hi, my name is ",
-                              style: AppTextStyles.text12(
-                                bold: true,
-                                val: size.width * 0.025,
-                              ).copyWith(
+                              style: AppTextStyles.h4(bold: true, size: size)
+                                  .copyWith(
                                 color: Colors.white,
                               ),
                             ),
                             TextSpan(
                               text: "Jay Isampelliwar\n",
-                              style: AppTextStyles.text12(
-                                bold: true,
-                                val: size.width * 0.025,
-                              ).copyWith(color: AppColors.secondary),
+                              style: AppTextStyles.h4(bold: true, size: size)
+                                  .copyWith(color: AppColors.secondary),
                             ),
                             TextSpan(
                               text: "I'm Full Stack Flutter Developer.",
-                              style: AppTextStyles.text12(
-                                bold: true,
-                                val: size.width * 0.025,
-                              ).copyWith(
+                              style: AppTextStyles.h4(bold: true, size: size)
+                                  .copyWith(
                                 color: Colors.white,
                               ),
                             ),
