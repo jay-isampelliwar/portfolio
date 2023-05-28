@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/web_colors.dart';
 
 import '../containers/container1.dart';
 import '../containers/container2.dart';
-import '../containers/container3.dart';
 import '../containers/container4.dart';
 import '../containers/footer.dart';
 
@@ -13,13 +13,12 @@ class Desktop extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.primary,
       body: SingleChildScrollView(
         child: Column(
           children: const [
             Container1(),
             Container2(),
-            Container3(),
             Container4(),
             Footer(),
           ],
