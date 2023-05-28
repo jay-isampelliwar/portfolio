@@ -5,51 +5,61 @@ import '../utils/text_styles.dart';
 import '../utils/web_colors.dart';
 
 class ProjectContainer extends StatelessWidget {
-  ProjectContainer({required this.description, required this.title, super.key});
+  ProjectContainer(
+      {required this.onTap,
+      required this.description,
+      required this.title,
+      super.key});
 
   String title;
   String description;
+  Function()? onTap;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Row(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return SizedBox(
+      width: size.width * 0.6,
+      child: FittedBox(
+        child: Row(
           children: [
-            Text(
-              title,
-              style: AppTextStyles.h5(size: size, bold: true),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: AppTextStyles.h5(size: size, bold: true),
+                ),
+                SizedBox(
+                  height: size.width * 0.01,
+                ),
+                Text(
+                  description,
+                  style: AppTextStyles.h6(
+                    size: size,
+                  ),
+                ),
+                SizedBox(
+                  height: size.width * 0.01,
+                ),
+                AppButton(
+                  onTap: onTap,
+                  textColor: Colors.white,
+                  text: "Source Code",
+                  replaceTextColor: AppColors.primary,
+                ),
+              ],
             ),
             SizedBox(
-              height: size.width * 0.01,
+              width: size.width * 0.03,
             ),
-            Text(
-              description,
-              style: AppTextStyles.h6(
-                size: size,
-              ),
-            ),
-            SizedBox(
-              height: size.width * 0.01,
-            ),
-            AppButton(
-              onTap: () {},
-              textColor: Colors.white,
-              text: "Source Code",
-              replaceTextColor: AppColors.primary,
+            Container(
+              height: size.width * 0.2,
+              width: size.width * 0.2,
+              color: AppColors.secondary,
             ),
           ],
         ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
-        Container(
-          height: size.width * 0.15,
-          width: size.width * 0.15,
-          color: AppColors.secondary,
-        ),
-      ],
+      ),
     );
   }
 }

@@ -87,7 +87,7 @@ class AppTextStyles {
       required Size size,
       Color color = Colors.white}) {
     return TextStyle(
-      fontSize: size.width * 0.01,
+      fontSize: size.width * 0.014,
       color: color,
       fontWeight: bold
           ? FontWeight.bold
