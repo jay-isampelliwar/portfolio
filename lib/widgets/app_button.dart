@@ -25,6 +25,8 @@ class _AppButtonState extends State<AppButton> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
+    final transform = Matrix4.identity()..translate(0, -5, 0);
+    final hoverTransform = isHover ? transform : Matrix4.identity();
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: widget.onTap,
@@ -32,6 +34,7 @@ class _AppButtonState extends State<AppButton> {
         onEnter: (event) => changeState(true),
         onExit: (event) => changeState(false),
         child: AnimatedContainer(
+          transform: hoverTransform,
           duration: const Duration(milliseconds: 50),
           margin: EdgeInsets.symmetric(
             vertical: size.height * 0.02,

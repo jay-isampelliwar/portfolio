@@ -21,6 +21,7 @@ class ProjectContainer extends StatelessWidget {
       width: size.width * 0.6,
       child: FittedBox(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +51,7 @@ class ProjectContainer extends StatelessWidget {
               ],
             ),
             SizedBox(
-              width: size.width * 0.03,
+              width: size.width * 0.1,
             ),
             Container(
               height: size.width * 0.2,
