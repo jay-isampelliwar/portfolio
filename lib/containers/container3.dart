@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/utils/web_colors.dart';
 
 import '../utils/text_styles.dart';
@@ -28,19 +29,19 @@ class Container3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/flutter.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/Dart.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/java.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/javascript.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/nodejs.svg",
             ),
           ],
         ),
@@ -61,19 +62,16 @@ class Container3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/linkedin.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/github.svg",
             ),
             TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/youtube.svg",
             ),
             TechCard(
-              imagePath: "",
-            ),
-            TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/instagram.svg",
             ),
           ],
         ),
@@ -94,19 +92,7 @@ class Container3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
             TechCard(
-              imagePath: "",
-            ),
-            TechCard(
-              imagePath: "",
-            ),
-            TechCard(
-              imagePath: "",
-            ),
-            TechCard(
-              imagePath: "",
-            ),
-            TechCard(
-              imagePath: "",
+              imagePath: "assets/svgs/leetcode.svg",
             ),
           ],
         ),
@@ -136,8 +122,9 @@ class _TechCardState extends State<TechCard> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
         transform: hoverTransform,
-        height: size.width * 0.1,
-        width: size.width * 0.1,
+        height: size.width * 0.08,
+        width: size.width * 0.08,
+        padding: EdgeInsets.all(size.width * 0.01),
         decoration: BoxDecoration(
             color: AppColors.primary,
             border: Border.all(
@@ -156,6 +143,14 @@ class _TechCardState extends State<TechCard> {
                   blurRadius: isHover ? 5 : 0,
                   spreadRadius: 1),
             ]),
+        child: Align(
+          child: SvgPicture.asset(
+            widget.imagePath,
+            fit: BoxFit.fill,
+            width: size.width * 0.04,
+            height: size.width * 0.04,
+          ),
+        ),
       ),
     );
   }
