@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTextStyles {
   static TextStyle h1(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -11,14 +11,14 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
   }
 
   static TextStyle h2(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -27,14 +27,14 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
   }
 
   static TextStyle h3(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -43,14 +43,14 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
   }
 
   static TextStyle h4(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -59,14 +59,14 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
   }
 
   static TextStyle h5(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -75,14 +75,14 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
   }
 
   static TextStyle h6(
-      {bool light = false,
+      {bool lite = false,
       bool bold = false,
       required Size size,
       Color color = Colors.white}) {
@@ -91,7 +91,7 @@ class AppTextStyles {
       color: color,
       fontWeight: bold
           ? FontWeight.bold
-          : light
+          : lite
               ? FontWeight.w100
               : FontWeight.normal,
     );
