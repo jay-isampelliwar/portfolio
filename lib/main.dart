@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/provider/container1.dart';
 import 'package:portfolio/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,14 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: "Montserrat",
-        primaryColor: Colors.greenAccent,
-        brightness: Brightness.light,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => Container1Provider())
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          fontFamily: "Montserrat",
+          primaryColor: Colors.greenAccent,
+          brightness: Brightness.light,
+        ),
+        home: const Home(),
       ),
-      home: const Home(),
     );
   }
 }
