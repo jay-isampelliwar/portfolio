@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/utils/web_colors.dart';
@@ -20,40 +19,6 @@ class Footer extends StatelessWidget {
             Icons.arrow_upward_rounded,
             size: size.width * 0.03,
             color: Colors.white,
-          ),
-          SizedBox(
-            height: size.height * 0.05,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const Spacer(),
-              SvgPicture.asset(
-                "assets/svgs/twitter.svg",
-                height: size.width * 0.03,
-                width: size.width * 0.03,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: size.width * 0.02,
-              ),
-              SvgPicture.asset(
-                "assets/svgs/linkedin.svg",
-                height: size.width * 0.03,
-                width: size.width * 0.03,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: size.width * 0.02,
-              ),
-              SvgPicture.asset(
-                "assets/svgs/github.svg",
-                height: size.width * 0.03,
-                width: size.width * 0.03,
-                color: Colors.white,
-              ),
-              const Spacer(),
-            ],
           ),
           SizedBox(
             height: size.width * 0.01,
