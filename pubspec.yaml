@@ -37,11 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   hexcolor: ^2.0.7
-<<<<<<< HEAD
-  provider: ^6.0.5
-=======
   sprung: ^3.0.1
->>>>>>> 6d4eb5a7b8d2b647594c6f8c75c94f7a7566e58f
 
 dev_dependencies:
   flutter_test:
