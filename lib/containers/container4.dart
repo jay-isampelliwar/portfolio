@@ -33,8 +33,16 @@ class Container4 extends StatelessWidget {
           children: [
             ProjectContainer(
               description:
-                  "Developed a mobile application using Flutter for the frontend and \nNode.js with Express.js and Socket.IO for the backend. \nEnabled real-time communication by allowing users to join the chat by \nentering their name on the lobby page.",
+                  "Developed a mobile application using Flutter for the frontend and Node.js with Express.js and Socket.IO for the backend. Enabled real-time communication by allowing users to join the chat byentering their name on the lobby page.",
               title: "Real-Time Chatting Application",
+              techStack: const [
+                "Flutter",
+                "NodeJS",
+                "ExpressJS",
+                "SocketIO",
+                "JavaScript",
+                "Dart"
+              ],
               onTap: () {
                 html.window.open(
                     "https://github.com/jay-isampelliwar/flutter_chat_app",
@@ -46,8 +54,16 @@ class Container4 extends StatelessWidget {
             ),
             ProjectContainer(
               description:
-                  "I developed a full-stack todo application using Flutter and the BLoC pattern \nthat includes features such as JWT authentication, email OTP verification,\nand the ability to add and delete todo items. This project showcases my\nproficiency in mobile app development using Flutter and my ability to\nimplement best practices such as separation of concerns and state\nmanagement using the BLoC pattern.",
+                  "I developed a full-stack todo application using Flutter and the BLoC pattern that includes features such as JWT authentication, email OTP verification, and the ability to add and delete todo items. This project showcases my proficiency in mobile app development using Flutter and my ability to implement best practices such as separation of concerns and state management using the BLoC pattern.",
               title: "TODO",
+              techStack: const [
+                "Flutter",
+                "NodeJS",
+                "ExpressJS",
+                "MongoDB",
+                "JavaScript",
+                "Dart"
+              ],
               onTap: () {
                 html.window.open(
                     "https://github.com/jay-isampelliwar/todo_app", "_blank");
@@ -62,8 +78,9 @@ class Container4 extends StatelessWidget {
                     "https://github.com/jay-isampelliwar/Weather_App",
                     "_blank");
               },
+              techStack: const ["Flutter", "RestAPI", "Dart"],
               description:
-                  "Everyone finds the weather forecast app to be very helpful. Knowing the\nweather information can help you carefully plan. I used the\nOpenweathermap API to obtain the data for this application. And we are\nextracting data from it using the http get method, transforming it into the\nDart Model class, and rendering it on the UI. To organize and manage the\ncode, I used the Provider state management library.",
+                  '''Everyone finds the weather forecast app to be very helpful. Knowing theweather information can help you carefully plan. I used theOpenweathermap API to obtain the data for this application. And we areextracting data from it using the http get method, transforming it into theDart Model class, and rendering it on the UI. To organize and manage thecode, I used the Provider state management library.''',
               title: "Weather forecast",
             ),
           ],
