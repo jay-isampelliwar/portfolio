@@ -56,20 +56,15 @@ class Container4 extends StatelessWidget {
             SizedBox(
               height: size.height * 0.1,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ProjectContainer(
-                  onTap: () {
-                    html.window.open(
-                        "https://github.com/jay-isampelliwar/Weather_App",
-                        "_blank");
-                  },
-                  description:
-                      "Everyone finds the weather forecast app to be very helpful. Knowing the\nweather information can help you carefully plan. I used the\nOpenweathermap API to obtain the data for this application. And we are\nextracting data from it using the http get method, transforming it into the\nDart Model class, and rendering it on the UI. To organize and manage the\ncode, I used the Provider state management library.",
-                  title: "Weather forecast",
-                ),
-              ],
+            ProjectContainer(
+              onTap: () {
+                html.window.open(
+                    "https://github.com/jay-isampelliwar/Weather_App",
+                    "_blank");
+              },
+              description:
+                  "Everyone finds the weather forecast app to be very helpful. Knowing the\nweather information can help you carefully plan. I used the\nOpenweathermap API to obtain the data for this application. And we are\nextracting data from it using the http get method, transforming it into the\nDart Model class, and rendering it on the UI. To organize and manage the\ncode, I used the Provider state management library.",
+              title: "Weather forecast",
             ),
           ],
         )

@@ -59,15 +59,16 @@ class Container2 extends StatelessWidget {
                         height: size.height * 0.01,
                       ),
                       AppButton(
-                          text: "View Resume",
-                          replaceTextColor: AppColors.secondary,
-                          textColor: Colors.white,
-                          onTap: () {
-                            html.window.open(
-                              "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=share_link",
-                              "_blank",
-                            );
-                          })
+                        text: "View Resume",
+                        replaceTextColor: AppColors.secondary,
+                        textColor: Colors.white,
+                        onTap: () {
+                          html.window.open(
+                            "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=share_link",
+                            "_blank",
+                          );
+                        },
+                      )
                     ],
                   ),
                 ],
