@@ -64,7 +64,7 @@ class Container2 extends StatelessWidget {
                       height: size.width * 0.02,
                     ),
                     Text(
-                      "I recently completed B.Tech degree from Rajiv Gandhi College of Engineering Research and Technology. I specialized in Computer Science Engineering and gained hands-on experience through projects and coursework.I look forward to utilizing my education and experiences to tackle challenges, drive innovation, and contribute to the ever-evolving world of technology.",
+                      "I recently completed B.Tech degree from Rajiv Gandhi College of Engineering Research and Technology. Specialized in Computer Science Engineering and gained hands-on experience through projects and coursework. I look forward to utilizing my education and experiences to tackle challenges, drive innovation, and contribute to the ever-evolving world of technology.",
                       textAlign: TextAlign.justify,
                       style: AppTextStyles.h6(size: size),
                     ),
