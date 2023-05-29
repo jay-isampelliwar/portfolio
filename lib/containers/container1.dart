@@ -84,20 +84,21 @@ class _Container1State extends State<Container1>
                                 ShaderMask(
                                   shaderCallback: (bounds) {
                                     return LinearGradient(stops: [
-                                      _animation.value - 0.3,
+                                      _animation.value - 0.5,
                                       _animation.value,
-                                      _animation.value + 0.3
+                                      _animation.value + 0.5
                                     ], colors: [
                                       AppColors.secondary,
-                                      AppColors.litePrimary,
-                                      AppColors.footer
+                                      Colors.purpleAccent,
+                                      Colors.pink
                                     ]).createShader(bounds);
                                   },
                                   child: Text("Jay Isampelliwar\n",
                                       style: AppTextStyles.h4(
                                               bold: true, size: size)
                                           .copyWith(
-                                              color: AppColors.secondary)),
+                                        color: Colors.white,
+                                      )),
                                 ),
                               ],
                             ),
