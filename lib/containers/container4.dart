@@ -14,11 +14,8 @@ class Container4 extends StatelessWidget {
     return Container(
       width: size.width,
       color: AppColors.primary,
-      padding: EdgeInsets.symmetric(vertical: size.height * 0.06),
+      padding: EdgeInsets.symmetric(vertical: size.width * 0.04),
       child: Column(children: [
-        SizedBox(
-          height: size.height * 0.03,
-        ),
         Text(
           "PROJECTS",
           style: AppTextStyles.h4(
@@ -27,7 +24,7 @@ class Container4 extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: size.height * 0.1,
+          height: size.width * 0.04,
         ),
         Column(
           children: [
