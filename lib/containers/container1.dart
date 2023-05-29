@@ -14,26 +14,8 @@ class Container1 extends StatefulWidget {
   State<Container1> createState() => _Container1State();
 }
 
-class _Container1State extends State<Container1>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-  late Animation<double> _animation;
-
-  @override
-  void initState() {
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1000),
-    );
-
-    _animationController.repeat(reverse: true);
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)
-      ..addListener(() {
-        setState(() {});
-      });
-    super.initState();
-  }
-
+class _Container1State extends State<Container1> {
+  bool isHover = false;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -62,55 +44,55 @@ class _Container1State extends State<Container1>
                     duration: const Duration(milliseconds: 1500),
                     tween: Tween<double>(begin: 0, end: size.width * 0.1),
                     builder: (context, value, child) {
-                      return Container(
-                        margin: EdgeInsets.only(
-                          left: value,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                      return Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: value,
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  "Hi, my name is ",
+                                  "Hi, I am ",
                                   style:
                                       AppTextStyles.h4(bold: true, size: size)
                                           .copyWith(
                                     color: Colors.white,
                                   ),
                                 ),
-                                ShaderMask(
-                                  shaderCallback: (bounds) {
-                                    return LinearGradient(stops: [
-                                      _animation.value - 0.5,
-                                      _animation.value,
-                                      _animation.value + 0.5
-                                    ], colors: [
-                                      AppColors.secondary,
-                                      Colors.purpleAccent,
-                                      Colors.pink
-                                    ]).createShader(bounds);
+                                MouseRegion(
+                                  onEnter: (event) {
+                                    changeState(true);
                                   },
-                                  child: Text("Jay Isampelliwar\n",
-                                      style: AppTextStyles.h4(
+                                  onExit: (event) {
+                                    changeState(false);
+                                  },
+                                  child: Text("Jay Isampelliwar",
+                                      style: AppTextStyles.h3(
                                               bold: true, size: size)
-                                          .copyWith(
-                                        color: Colors.white,
-                                      )),
+                                          .copyWith(shadows: [
+                                        Shadow(
+                                            offset: isHover
+                                                ? const Offset(-1, -1)
+                                                : Offset.zero,
+                                            color: AppColors.gradientColor2,
+                                            blurRadius: isHover ? 2 : 0),
+                                        Shadow(
+                                            offset: isHover
+                                                ? const Offset(1, 1)
+                                                : Offset.zero,
+                                            color: AppColors.gradientColor2,
+                                            blurRadius: isHover ? 2 : 0)
+                                      ])),
                                 ),
                               ],
                             ),
-                            Text(
-                              "I'm Flutter Developer.",
-                              style: AppTextStyles.h4(bold: true, size: size)
-                                  .copyWith(
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
-                        ),
+                          ),
+                          SizedBox(
+                            height: size.width * 0.02,
+                          ),
+                        ],
                       );
                     }),
               ),
@@ -119,5 +101,11 @@ class _Container1State extends State<Container1>
         );
       },
     );
+  }
+
+  changeState(bool val) {
+    setState(() {
+      isHover = val;
+    });
   }
 }
