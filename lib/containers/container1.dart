@@ -1,6 +1,9 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/provider/container1.dart';
 import 'package:portfolio/utils/web_colors.dart';
+import 'package:portfolio/widgets/app_button.dart';
 import 'package:provider/provider.dart';
 
 import '../utils/text_styles.dart';
@@ -26,18 +29,24 @@ class _Container1State extends State<Container1> {
           width: size.width,
           child: Stack(
             children: [
-              AnimatedOpacity(
-                opacity: value.opacity,
-                duration: const Duration(milliseconds: 1500),
-                child: Image.asset(
-                  "assets/images/me.png",
-                  fit: BoxFit.fill,
-                  width: size.width,
-                  height: size.height,
-                ),
+              TweenAnimationBuilder(
+                tween: Tween<double>(begin: 0, end: 1),
+                duration: const Duration(seconds: 1),
+                builder: (context, value, child) {
+                  return AnimatedOpacity(
+                    opacity: value,
+                    duration: const Duration(milliseconds: 1500),
+                    child: Image.asset(
+                      "assets/images/me.png",
+                      fit: BoxFit.fill,
+                      width: size.width,
+                      height: size.height,
+                    ),
+                  );
+                },
               ),
               Positioned(
-                top: size.height * 0.5,
+                top: size.height * 0.4,
                 child: TweenAnimationBuilder(
                     onEnd: () {
                       value.setOpacity(1);
@@ -72,48 +81,90 @@ class _Container1State extends State<Container1> {
                                       onExit: (event) {
                                         changeState(false);
                                       },
-                                      child: Text("Jay Isampelliwar",
-                                          style: AppTextStyles.h3(
-                                                  bold: true, size: size)
-                                              .copyWith(shadows: [
-                                            Shadow(
-                                                offset: isHover
-                                                    ? const Offset(-1, -1)
-                                                    : Offset.zero,
-                                                color: AppColors.gradientColor2,
-                                                blurRadius: isHover ? 2 : 0),
-                                            Shadow(
-                                                offset: isHover
-                                                    ? const Offset(1, 1)
-                                                    : Offset.zero,
-                                                color: AppColors.gradientColor2,
-                                                blurRadius: isHover ? 2 : 0)
-                                          ])),
+                                      child: ShaderMask(
+                                        shaderCallback: (bounds) {
+                                          return LinearGradient(stops: const [
+                                            0.2,
+                                            1
+                                          ], colors: [
+                                            Colors.white,
+                                            AppColors.gradientColor1
+                                          ]).createShader(bounds);
+                                        },
+                                        child: Text("Jay Isampelliwar",
+                                            style: AppTextStyles.h4(
+                                              size: size,
+                                              bold: true,
+                                            )),
+                                      ),
                                     ),
                                   ],
+                                ),
+                                ShaderMask(
+                                  shaderCallback: (bounds) {
+                                    return LinearGradient(stops: const [
+                                      0.6,
+                                      1
+                                    ], colors: [
+                                      Colors.white,
+                                      AppColors.gradientColor1
+                                    ]).createShader(bounds);
+                                  },
+                                  child: Text(
+                                    "Flutter Developer",
+                                    style: AppTextStyles.h5(
+                                        size: size, lite: true),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: size.width * 0.02,
                                 ),
                                 Row(
                                   children: [
                                     SocialMediaIcon(
                                       path: "assets/svgs/github.svg",
-                                      onClick: () {},
+                                      isGit: true,
+                                      onClick: () {
+                                        html.window.open(
+                                            "https://github.com/jay-isampelliwar",
+                                            "_blank");
+                                      },
                                     ),
                                     SizedBox(
                                       width: size.width * 0.012,
                                     ),
                                     SocialMediaIcon(
                                       path: "assets/svgs/linkedin.svg",
-                                      onClick: () {},
+                                      isGit: false,
+                                      onClick: () {
+                                        html.window.open(
+                                            "https://www.linkedin.com/in/jay-isampelliwar21/",
+                                            "_blank");
+                                      },
                                     ),
                                     SizedBox(
                                       width: size.width * 0.012,
                                     ),
                                     SocialMediaIcon(
                                       path: "assets/svgs/instagram.svg",
-                                      onClick: () {},
+                                      isGit: false,
+                                      onClick: () {
+                                        html.window.open(
+                                            "https://www.instagram.com/___flutter_x/",
+                                            "_blank");
+                                      },
                                     ),
                                   ],
                                 ),
+                                SizedBox(
+                                  height: size.width * 0.01,
+                                ),
+                                AppButton(
+                                  onTap: () {},
+                                  textColor: Colors.white,
+                                  text: "View Resume",
+                                  replaceTextColor: Colors.black,
+                                )
                               ],
                             ),
                           ),
