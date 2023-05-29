@@ -51,7 +51,7 @@ class Container2 extends StatelessWidget {
                   ),
                   AppButton(
                     text: "View Resume",
-                    replaceTextColor: AppColors.secondary,
+                    replaceTextColor: Colors.black,
                     textColor: Colors.white,
                     onTap: () {
                       html.window.open(
