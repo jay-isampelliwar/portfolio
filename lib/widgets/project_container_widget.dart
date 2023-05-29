@@ -39,12 +39,12 @@ class _ProjectContainerState extends State<ProjectContainer> {
             boxShadow: [
               BoxShadow(
                   offset: isHover ? const Offset(3, 3) : Offset.zero,
-                  color: AppColors.gradientColor1,
-                  blurRadius: isHover ? 3 : 0),
+                  color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                  blurRadius: 3),
               BoxShadow(
                   offset: isHover ? const Offset(-3, -3) : Offset.zero,
-                  color: AppColors.gradientColor1,
-                  blurRadius: isHover ? 3 : 0)
+                  color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                  blurRadius: 3)
             ]),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +88,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                                   BorderRadius.circular(size.width * 0.01),
                               border: Border.all(
                                 width: 1,
-                                color: AppColors.secondary,
+                                color: AppColors.gradientColor1,
                               ),
                             ),
                             child: Text(
