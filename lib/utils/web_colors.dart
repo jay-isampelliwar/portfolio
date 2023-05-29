@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class AppColors {
-  static Color primary = HexColor("#21262d");
+  static Color primary = HexColor("#0A0A0A");
   static Color secondary = HexColor("#D36DFF");
   // static Color secondary = HexColor("#00c5ad");
   static Color footer = HexColor("#333333");
