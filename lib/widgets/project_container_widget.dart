@@ -35,15 +35,15 @@ class _ProjectContainerState extends State<ProjectContainer> {
             vertical: size.width * 0.02, horizontal: size.width * 0.02),
         decoration: BoxDecoration(
             color: AppColors.primary,
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(size.width * 0.01),
             boxShadow: [
               BoxShadow(
                   offset: isHover ? const Offset(3, 3) : Offset.zero,
-                  color: AppColors.darkPrimary,
+                  color: AppColors.gradientColor1,
                   blurRadius: isHover ? 3 : 0),
               BoxShadow(
                   offset: isHover ? const Offset(-3, -3) : Offset.zero,
-                  color: AppColors.litePrimary,
+                  color: AppColors.gradientColor1,
                   blurRadius: isHover ? 3 : 0)
             ]),
         child: Row(
@@ -65,7 +65,6 @@ class _ProjectContainerState extends State<ProjectContainer> {
                   ),
                   Text(
                     widget.description,
-                    textAlign: TextAlign.justify,
                     maxLines: 6,
                     overflow: TextOverflow.ellipsis,
                     style: AppTextStyles.h6(
@@ -81,7 +80,9 @@ class _ProjectContainerState extends State<ProjectContainer> {
                         .map(
                           (tech) => Container(
                             padding: EdgeInsets.all(size.width * 0.004),
-                            margin: EdgeInsets.only(right: size.width * 0.004),
+                            margin: EdgeInsets.only(
+                                right: size.width * 0.004,
+                                bottom: size.width * 0.004),
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.circular(size.width * 0.01),
@@ -118,7 +119,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
             ),
             Container(
               height: size.width * 0.2,
-              width: size.width * 0.2,
+              width: size.width * 0.3,
               color: AppColors.footer,
             )
           ],
