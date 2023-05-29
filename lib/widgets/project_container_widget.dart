@@ -66,6 +66,8 @@ class _ProjectContainerState extends State<ProjectContainer> {
                   Text(
                     widget.description,
                     textAlign: TextAlign.justify,
+                    maxLines: 6,
+                    overflow: TextOverflow.ellipsis,
                     style: AppTextStyles.h6(
                       size: size,
                       lite: true,
@@ -112,7 +114,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
               ),
             ),
             SizedBox(
-              width: size.width * 0.01,
+              width: size.width * 0.04,
             ),
             Container(
               height: size.width * 0.2,
