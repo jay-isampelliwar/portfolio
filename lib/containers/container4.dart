@@ -47,7 +47,7 @@ class Container4 extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: size.height * 0.06,
             ),
             ProjectContainer(
               description:
@@ -67,7 +67,7 @@ class Container4 extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: size.height * 0.06,
             ),
             ProjectContainer(
               onTap: () {
