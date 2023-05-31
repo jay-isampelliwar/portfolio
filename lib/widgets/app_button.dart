@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/web_colors.dart';
 import '../utils/text_styles.dart';
 
 class AppButton extends StatefulWidget {
@@ -42,14 +43,26 @@ class _AppButtonState extends State<AppButton> {
           height: size.width * 0.035,
           width: size.width * 0.15,
           decoration: BoxDecoration(
-            color: isHover ? widget.borderColor : widget.bgColor,
-            border: Border.all(color: widget.borderColor, width: 2),
+            color: AppColors.primary,
+            borderRadius: BorderRadius.circular(size.width * 0.01),
+            boxShadow: [
+              BoxShadow(
+                offset: isHover ? const Offset(-2, -2) : Offset.zero,
+                blurRadius: 2,
+                color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+              ),
+              BoxShadow(
+                offset: isHover ? const Offset(2, 2) : Offset.zero,
+                blurRadius: 2,
+                color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+              ),
+            ],
           ),
           child: Align(
             child: Text(
               widget.text,
               style: AppTextStyles.h5(bold: true, size: size).copyWith(
-                color: isHover ? widget.replaceTextColor : widget.textColor,
+                color: widget.textColor,
               ),
             ),
           ),
