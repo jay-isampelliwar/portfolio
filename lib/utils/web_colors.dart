@@ -9,5 +9,5 @@ class AppColors {
   static Color litePrimary = HexColor("#4e5991");
   static Color darkPrimary = HexColor("#01051d");
   static Color gradientColor1 = HexColor("#84D2FF");
-  static Color gradientColor2 = HexColor("#D36DFF");
+  // static Color gradientColor1 = const Color(0xFFFFEE00);
 }
