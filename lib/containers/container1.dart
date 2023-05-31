@@ -160,7 +160,11 @@ class _Container1State extends State<Container1> {
                                   height: size.width * 0.01,
                                 ),
                                 AppButton(
-                                  onTap: () {},
+                                  onTap: () {
+                                    html.window.open(
+                                        "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=sharing",
+                                        "_blank");
+                                  },
                                   textColor: Colors.white,
                                   text: "View Resume",
                                   replaceTextColor: Colors.black,
