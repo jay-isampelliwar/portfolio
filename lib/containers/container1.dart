@@ -111,7 +111,7 @@ class _Container1State extends State<Container1> {
                                     ]).createShader(bounds);
                                   },
                                   child: Text(
-                                    "Flutter Developer",
+                                    "A Flutter Developer",
                                     style: AppTextStyles.h5(
                                         size: size, lite: true),
                                   ),
