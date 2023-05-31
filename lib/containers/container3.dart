@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/skill_card.dart';
 
@@ -36,31 +37,45 @@ class Container3 extends StatelessWidget {
           spacing: size.width * 0.01,
           children: [
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://flutter.dev/", "_blank");
+              },
               path: "assets/svgs/flutter.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://dart.dev/", "_blank");
+              },
               path: "assets/svgs/dart.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://nodejs.org/en", "_blank");
+              },
               path: "assets/svgs/node-js.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://www.java.com/en/", "_blank");
+              },
               path: "assets/svgs/java.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://www.javascript.com/", "_blank");
+              },
               path: "assets/svgs/javaScript.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://www.mongodb.com/  ", "_blank");
+              },
               path: "assets/svgs/mongodb.svg",
             ),
             SkillCard(
-              onClick: () {},
+              onClick: () {
+                html.window.open("https://github.com/", "_blank");
+              },
               path: "assets/svgs/github.svg",
             ),
           ],
