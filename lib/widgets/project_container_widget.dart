@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/utils/text_styles.dart';
-import 'package:portfolio/widgets/app_button.dart';
 
 import '../utils/web_colors.dart';
+import 'app_button.dart';
 
 class ProjectContainer extends StatefulWidget {
   ProjectContainer(
@@ -39,11 +40,11 @@ class _ProjectContainerState extends State<ProjectContainer> {
             boxShadow: [
               BoxShadow(
                   offset: isHover ? const Offset(3, 3) : Offset.zero,
-                  color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                  color: isHover ? AppColors.secondary : AppColors.primary,
                   blurRadius: 3),
               BoxShadow(
                   offset: isHover ? const Offset(-3, -3) : Offset.zero,
-                  color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                  color: isHover ? AppColors.secondary : AppColors.primary,
                   blurRadius: 3)
             ]),
         child: Row(
@@ -88,7 +89,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                                   BorderRadius.circular(size.width * 0.01),
                               border: Border.all(
                                 width: 1,
-                                color: AppColors.gradientColor1,
+                                color: AppColors.secondary,
                               ),
                             ),
                             child: Text(
@@ -105,11 +106,14 @@ class _ProjectContainerState extends State<ProjectContainer> {
                   SizedBox(
                     height: size.width * 0.02,
                   ),
-                  AppButton(
+                  AppCircularButton(
                     onTap: widget.onTap,
                     textColor: Colors.white,
-                    text: "Source Code",
                     replaceTextColor: Colors.black,
+                    child: SvgPicture.asset(
+                      "assets/svgs/link.svg",
+                      color: Colors.white,
+                    ),
                   )
                 ],
               ),

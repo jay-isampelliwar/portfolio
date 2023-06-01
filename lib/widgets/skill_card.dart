@@ -35,12 +35,12 @@ class _SkillCardState extends State<SkillCard> {
               BoxShadow(
                 offset: isHover ? const Offset(-2, -2) : Offset.zero,
                 blurRadius: 2,
-                color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                color: isHover ? AppColors.secondary : AppColors.primary,
               ),
               BoxShadow(
                 offset: isHover ? const Offset(2, 2) : Offset.zero,
                 blurRadius: 2,
-                color: isHover ? AppColors.gradientColor1 : AppColors.primary,
+                color: isHover ? AppColors.secondary : AppColors.primary,
               ),
             ],
           ),
