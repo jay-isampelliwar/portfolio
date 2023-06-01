@@ -6,16 +6,19 @@ import '../utils/web_colors.dart';
 import 'app_button.dart';
 
 class ProjectContainer extends StatefulWidget {
-  ProjectContainer(
-      {required this.onTap,
-      required this.description,
-      required this.title,
-      required this.techStack,
-      super.key});
+  ProjectContainer({
+    required this.onTap,
+    required this.description,
+    required this.title,
+    required this.techStack,
+    required this.image,
+    super.key,
+  });
 
   List<String> techStack;
   String title;
   String description;
+  String image;
   Function()? onTap;
 
   @override
@@ -121,10 +124,10 @@ class _ProjectContainerState extends State<ProjectContainer> {
             SizedBox(
               width: size.width * 0.04,
             ),
-            Container(
+            SizedBox(
               height: size.width * 0.2,
               width: size.width * 0.3,
-              color: AppColors.footer,
+              child: Image.asset(widget.image),
             )
           ],
         ),
