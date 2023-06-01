@@ -32,6 +32,7 @@ class Container4 extends StatelessWidget {
               description:
                   "Developed a mobile application using Flutter for the frontend and Node.js with Express.js and Socket.IO for the backend. Enabled real-time communication by allowing users to join the chat byentering their name on the lobby page.",
               title: "Real-Time Chatting Application",
+              image: "assets/images/chat.png",
               techStack: const [
                 "Flutter",
                 "NodeJS",
@@ -53,6 +54,7 @@ class Container4 extends StatelessWidget {
               description:
                   "I developed a full-stack todo application using Flutter and the BLoC pattern that includes features such as JWT authentication, email OTP verification, and the ability to add and delete todo items. This project showcases my proficiency in mobile app development using Flutter and my ability to implement best practices such as separation of concerns and state management using the BLoC pattern.",
               title: "TODO",
+              image: "assets/images/todo.png",
               techStack: const [
                 "Flutter",
                 "NodeJS",
@@ -76,6 +78,7 @@ class Container4 extends StatelessWidget {
                     "_blank");
               },
               techStack: const ["Flutter", "RestAPI", "Dart"],
+              image: "assets/images/weather.png",
               description:
                   '''Everyone finds the weather forecast app to be very helpful. Knowing theweather information can help you carefully plan. I used theOpenweathermap API to obtain the data for this application. And we areextracting data from it using the http get method, transforming it into theDart Model class, and rendering it on the UI. To organize and manage thecode, I used the Provider state management library.''',
               title: "Weather forecast",
