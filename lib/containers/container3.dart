@@ -21,16 +21,6 @@ class Container3 extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: size.width * 0.01,
-        ),
-        Text(
-          "What I Can Do",
-          style: AppTextStyles.h5(
-            size: size,
-            lite: true,
-          ),
-        ),
-        SizedBox(
           height: size.width * 0.04,
         ),
         Wrap(
