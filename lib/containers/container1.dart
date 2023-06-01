@@ -88,7 +88,7 @@ class _Container1State extends State<Container1> {
                                             1
                                           ], colors: [
                                             Colors.white,
-                                            AppColors.gradientColor1
+                                            AppColors.secondary
                                           ]).createShader(bounds);
                                         },
                                         child: Text("Jay Isampelliwar",
@@ -107,7 +107,7 @@ class _Container1State extends State<Container1> {
                                       1
                                     ], colors: [
                                       Colors.white,
-                                      AppColors.gradientColor1
+                                      AppColors.secondary
                                     ]).createShader(bounds);
                                   },
                                   child: Text(
@@ -159,15 +159,17 @@ class _Container1State extends State<Container1> {
                                 SizedBox(
                                   height: size.width * 0.01,
                                 ),
-                                AppButton(
+                                AppRectButton(
                                   onTap: () {
                                     html.window.open(
                                         "https://drive.google.com/file/d/1n9Y-W5iSe452Va1wgtSO_1u9Bl4_umKn/view?usp=sharing",
                                         "_blank");
                                   },
                                   textColor: Colors.white,
-                                  text: "View Resume",
                                   replaceTextColor: Colors.black,
+                                  child: Text("View Resume",
+                                      style: AppTextStyles.h5(
+                                          bold: true, size: size)),
                                 )
                               ],
                             ),
